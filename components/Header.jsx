@@ -4,10 +4,10 @@ import { useState } from "react";
 import Logo from "./Logo";
 
 const navItems = [
+  { href: "#inicio", label: "Inicio" },
   { href: "#experiencia", label: "Experiencia" },
-  { href: "#retos", label: "Retos" },
   { href: "#servicios", label: "Servicios" },
-  { href: "#metodo", label: "Metodo" },
+  { href: "#comunidad", label: "Comunidad" },
   { href: "#contacto", label: "Contacto" }
 ];
 
@@ -43,7 +43,7 @@ export default function Header() {
         <button
           type="button"
           className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.12] bg-white/[0.05] lg:hidden"
-          aria-label="Abrir menu"
+          aria-label="Abrir menú"
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
         >

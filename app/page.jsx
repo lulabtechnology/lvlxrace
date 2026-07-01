@@ -6,62 +6,63 @@ const asset = (path) => `${basePath}${path}`;
 
 const cards = [
   {
-    title: "Retos de alto impacto",
-    kicker: "Running / comunidad",
-    text: "Creamos experiencias deportivas que se sienten como una marca: intensas, visuales y memorables.",
+    title: "Experiencias deportivas",
+    kicker: "Running / fitness",
+    text: "Diseñamos carreras, retos y activaciones que se viven con intensidad desde el primer contacto hasta la meta.",
     image: "/assets/card-runner.webp",
-    action: "Explorar reto"
+    action: "Ver enfoque"
   },
   {
-    title: "Vikings Race",
-    kicker: "Resistencia / energia",
-    text: "Una identidad de carrera fuerte, aspiracional y lista para conectar atletas, marcas y publico.",
+    title: "Retos de alto impacto",
+    kicker: "Race Production",
+    text: "Creamos formatos deportivos para marcas, equipos y comunidades que buscan moverse, competir y conectar.",
     image: "/assets/card-vikings.webp",
-    action: "Ver experiencia"
+    action: "Conocer más"
   },
   {
-    title: "Aqua Performance",
-    kicker: "Swimming / precision",
-    text: "Visuales deportivos premium para retos acuaticos, entrenamiento y experiencias de rendimiento.",
+    title: "Comunidad en movimiento",
+    kicker: "Swimming / cycling",
+    text: "Cada experiencia está pensada para unir atletas, espectadores y aliados alrededor de una energía compartida.",
     image: "/assets/card-aqua.webp",
-    action: "Ver concepto"
+    action: "Ver comunidad"
   },
   {
-    title: "Activa tu marca",
-    kicker: "Produccion / estrategia",
-    text: "Disenamos el concepto, la estetica y la experiencia para que tu activacion no parezca generica.",
+    title: "Organiza con LVLX",
+    kicker: "Producción / estrategia",
+    text: "Llevamos tu idea desde el concepto visual hasta una experiencia deportiva clara, potente y memorable.",
     image: "/assets/card-organizer.webp",
-    action: "Crear proyecto"
+    action: "Hablemos"
   }
 ];
 
 const services = [
-  "Concepto visual y narrativa de experiencia",
-  "Landing premium lista para campanas",
-  "Sistema responsive para desktop y movil",
-  "Cards, secciones, marca y llamados a accion",
-  "Contenido editable sin base de datos"
+  "Producción de carreras y retos deportivos.",
+  "Diseño de experiencias para marcas y comunidades.",
+  "Activaciones fitness, wellness y team building.",
+  "Conceptualización visual y narrativa del evento.",
+  "Coordinación de atletas, rutas, estaciones y momentos clave."
 ];
 
 const workflowSteps = [
   {
     step: "01",
-    title: "Direccion visual",
-    text: "Definimos el universo de marca: energia, profundidad, paleta, imagenes y jerarquia visual."
+    title: "Concepto y estrategia",
+    text: "Definimos la experiencia, el recorrido, la narrativa visual y los momentos clave."
   },
   {
     step: "02",
-    title: "Landing de impacto",
-    text: "Construimos una web estatica, rapida y lista para GitHub + Vercel, sin paneles ni backend innecesario."
+    title: "Producción deportiva",
+    text: "Organizamos formatos, dinámicas, rutas, estaciones y detalles operativos de la experiencia."
   },
   {
     step: "03",
-    title: "Conversion clara",
-    text: "Cada seccion lleva al usuario hacia una accion: cotizar, conversar o activar una experiencia."
+    title: "Activación de marca",
+    text: "Integramos patrocinadores, contenido visual y puntos de contacto para maximizar recordación."
   }
 ];
 
-const partners = ["NUTRIX", "FITCORE", "SALOMON", "HYDRIX", "RUNLAB"];
+const disciplines = ["Running", "Swimming", "Fitness", "Cycling", "Race Production"];
+const partners = ["Patrocinadores", "Comunidades", "Wellness", "Contenido", "Rendimiento"];
 
 function Icon({ children }) {
   return (
@@ -85,7 +86,7 @@ export default function Page() {
           <source media="(max-width: 767px)" srcSet={asset("/assets/hero-mobile.webp")} />
           <img
             src={asset("/assets/hero-desktop.webp")}
-            alt="Atletas de alto rendimiento con energia neon"
+            alt="Atletas de alto rendimiento con energía neón"
             className="h-full w-full object-cover object-[62%_center] opacity-95 md:object-center"
             loading="eager"
           />
@@ -94,45 +95,40 @@ export default function Page() {
         <div className="absolute inset-x-0 bottom-0 -z-10 h-56 bg-gradient-to-t from-[#020815] to-transparent" />
 
         <div className="mx-auto flex min-h-[calc(100svh-9rem)] max-w-7xl items-center">
-          <div className="max-w-3xl pt-8 sm:pt-12 lg:pt-0">
+          <div className="max-w-4xl pt-8 sm:pt-12 lg:pt-0">
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyanx/30 bg-cyanx/10 px-4 py-2 text-xs font-black uppercase tracking-[0.26em] text-cyanx shadow-glow">
               <span className="h-2 w-2 rounded-full bg-cyanx pulse-glow" />
               Experiencias deportivas premium
             </div>
 
-            <h1 className="hero-title text-5xl font-black uppercase text-white sm:text-7xl lg:text-8xl xl:text-[7.4rem]">
-              Eleva tu <span className="text-cyanx drop-shadow-[0_0_24px_rgba(25,200,255,.45)]">maximo</span> potencial
+            <h1 className="hero-title text-4xl font-black uppercase text-white sm:text-6xl lg:text-7xl xl:text-[6.6rem]">
+              Experiencias que elevan el <span className="text-cyanx drop-shadow-[0_0_24px_rgba(25,200,255,.45)]">potencial humano</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-base leading-8 text-white/[0.76] sm:text-lg">
-              Disenamos experiencias deportivas, retos y activaciones visualmente brutales para marcas, comunidades y atletas que quieren sentirse por encima de lo comun.
+              Creamos experiencias deportivas, retos y activaciones de alto impacto para marcas, atletas y comunidades que buscan ir más lejos.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
-                href="#contacto"
+                href="#experiencia"
                 className="group inline-flex items-center justify-center rounded-full bg-cyanx px-7 py-4 text-sm font-black uppercase tracking-wide text-ink shadow-glow transition hover:-translate-y-1 hover:bg-white"
               >
-                Crear experiencia
-                <span className="ml-3 transition group-hover:translate-x-1">→</span>
+                Explorar experiencia
+                <span className="ml-3 transition group-hover:translate-x-1">{"\u2192"}</span>
               </a>
               <a
-                href="#retos"
+                href="#contacto"
                 className="inline-flex items-center justify-center rounded-full border border-white/[0.18] bg-white/[0.09] px-7 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:-translate-y-1 hover:border-cyanx/70 hover:bg-cyanx/10"
               >
-                Ver propuesta visual
+                Organizar con LVLX
               </a>
             </div>
 
-            <div className="mt-10 grid max-w-xl grid-cols-3 gap-3 sm:gap-4">
-              {[
-                ["100%", "frontend"],
-                ["0", "base de datos"],
-                ["Mobile", "first"]
-              ].map(([value, label]) => (
-                <div key={label} className="glass rounded-2xl px-4 py-4">
-                  <div className="text-2xl font-black text-white sm:text-3xl">{value}</div>
-                  <div className="mt-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white/[0.52]">{label}</div>
+            <div className="mt-10 flex max-w-2xl flex-wrap gap-3">
+              {disciplines.map((label) => (
+                <div key={label} className="glass rounded-2xl px-4 py-3">
+                  <div className="text-[0.68rem] font-black uppercase tracking-[0.18em] text-white/[0.72]">{label}</div>
                 </div>
               ))}
             </div>
@@ -144,18 +140,18 @@ export default function Page() {
         <div className="absolute left-0 top-1/2 -z-10 h-72 w-72 -translate-y-1/2 rounded-full bg-cyanDeep/16 blur-[110px]" />
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.32em] text-cyanx">Descubre la experiencia</p>
-            <h2 className="mt-5 text-balance text-4xl font-black uppercase leading-none tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">
-              Una landing que se siente como una marca grande.
+            <p className="text-sm font-black uppercase tracking-[0.32em] text-cyanx">Descubre la experiencia LVLX</p>
+            <h2 className="mt-5 text-balance text-4xl font-black uppercase leading-none text-white sm:text-5xl lg:text-6xl">
+              Descubre la experiencia LVLX
             </h2>
           </div>
           <div className="glass rounded-[2rem] p-6 sm:p-8 lg:p-10">
             <p className="text-lg leading-9 text-white/[0.78]">
-              La direccion es simple: nada generico. Fondo navy profundo, luces cyan, atletas en movimiento, tarjetas con energia, logo SVG nitido y una estructura lista para vender la experiencia sin depender de calendarios, paneles ni bases de datos.
+              En LVLX combinamos deporte, innovación y emoción para diseñar experiencias que conectan personas, activan comunidades y convierten cada reto en un momento memorable.
             </p>
             <div className="neon-line mt-8 h-px w-full" />
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {["Visual premium", "Rapida", "Editable"].map((item) => (
+              {["Deporte", "Innovación", "Emoción"].map((item) => (
                 <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-sm font-black uppercase tracking-wide text-white/[0.70]">
                   {item}
                 </div>
@@ -165,17 +161,17 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="retos" className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <section id="comunidad" className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.32em] text-cyanx">Retos y activaciones</p>
-              <h2 className="mt-4 max-w-3xl text-4xl font-black uppercase leading-none tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">
-                Secciones estaticas, potentes y sin calendario.
+              <p className="text-sm font-black uppercase tracking-[0.32em] text-cyanx">Comunidad en movimiento</p>
+              <h2 className="mt-4 max-w-3xl text-4xl font-black uppercase leading-none text-white sm:text-5xl lg:text-6xl">
+                Retos, activaciones y momentos memorables.
               </h2>
             </div>
             <p className="max-w-md text-base leading-8 text-white/[0.62]">
-              Las tarjetas funcionan como bloques comerciales: muestran categorias, ideas o servicios. Todo es editable desde codigo, sin base de datos.
+              Diseñamos formatos deportivos que reúnen marcas, atletas y comunidades alrededor de una energía compartida.
             </p>
           </div>
 
@@ -195,7 +191,7 @@ export default function Page() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-2xl font-black uppercase tracking-[-0.04em] text-white">{card.title}</h3>
+                  <h3 className="text-2xl font-black uppercase text-white">{card.title}</h3>
                   <p className="mt-3 min-h-24 text-sm leading-7 text-white/[0.62]">{card.text}</p>
                   <a href="#contacto" className="mt-5 inline-flex rounded-full bg-cyanx/12 px-4 py-2 text-xs font-black uppercase tracking-wide text-cyanx transition group-hover:bg-cyanx group-hover:text-ink">
                     {card.action}
@@ -208,11 +204,22 @@ export default function Page() {
       </section>
 
       <section className="px-4 py-10 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-white/[0.035] px-6 py-7">
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 text-center text-lg font-black uppercase tracking-[0.2em] text-white/[0.36] sm:text-xl">
-            {partners.map((partner) => (
-              <span key={partner} className="transition hover:text-cyanx">{partner}</span>
-            ))}
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 max-w-2xl">
+            <p className="text-sm font-black uppercase tracking-[0.32em] text-cyanx">Aliados</p>
+            <h2 className="mt-4 text-3xl font-black uppercase leading-tight text-white sm:text-4xl">
+              Aliados que pueden integrarse a la experiencia
+            </h2>
+            <p className="mt-4 text-base leading-8 text-white/[0.62]">
+              Creamos espacios preparados para marcas, patrocinadores y comunidades que quieran formar parte de una experiencia deportiva premium.
+            </p>
+          </div>
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] px-6 py-7">
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 text-center text-lg font-black uppercase tracking-[0.2em] text-white/[0.36] sm:text-xl">
+              {partners.map((partner) => (
+                <span key={partner} className="transition hover:text-cyanx">{partner}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -222,9 +229,12 @@ export default function Page() {
           <div className="relative p-6 sm:p-10 lg:p-14">
             <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-cyanx/18 blur-[100px]" />
             <p className="relative text-sm font-black uppercase tracking-[0.32em] text-cyanx">Servicios</p>
-            <h2 className="relative mt-5 text-4xl font-black uppercase leading-none tracking-[-0.05em] text-white sm:text-5xl">
-              Produccion visual para experiencias deportivas.
+            <h2 className="relative mt-5 text-4xl font-black uppercase leading-none text-white sm:text-5xl">
+              Servicios para experiencias deportivas
             </h2>
+            <p className="relative mt-5 max-w-xl text-base leading-8 text-white/[0.64]">
+              Convertimos ideas deportivas en experiencias visuales, emocionales y memorables.
+            </p>
             <div className="relative mt-9 grid gap-5">
               {services.map((service, index) => (
                 <div key={service} className="flex items-center gap-4 text-white/[0.72]">
@@ -245,9 +255,9 @@ export default function Page() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#03102a] via-[#03102a]/20 to-transparent lg:from-[#03102a]/30" />
             <div className="absolute bottom-6 left-6 right-6 rounded-3xl border border-white/[0.12] bg-[#020815]/62 p-5 backdrop-blur-xl sm:left-auto sm:w-80">
-              <div className="text-3xl font-black text-cyanx">Sin DB</div>
+              <div className="text-3xl font-black text-cyanx">Producción clara</div>
               <p className="mt-2 text-sm leading-6 text-white/[0.70]">
-                Esta version omite calendarios, login, paneles y gestion de registros. Es una landing estatica enfocada en imagen y conversion.
+                Cada detalle se prepara para que la experiencia se sienta ordenada, intensa y alineada con la marca desde el primer contacto.
               </p>
             </div>
           </div>
@@ -258,20 +268,23 @@ export default function Page() {
         <div className="absolute right-0 top-1/2 -z-10 h-96 w-96 -translate-y-1/2 rounded-full bg-cyanx/12 blur-[130px]" />
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.32em] text-cyanx">Metodo</p>
-            <h2 className="mt-4 text-4xl font-black uppercase leading-none tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">
-              Hecha para impresionar rapido y vender mejor.
+            <p className="text-sm font-black uppercase tracking-[0.32em] text-cyanx">Producción LVLX</p>
+            <h2 className="mt-4 text-4xl font-black uppercase leading-none text-white sm:text-5xl lg:text-6xl">
+              Diseñamos experiencias, no solo eventos
             </h2>
+            <p className="mt-5 text-base leading-8 text-white/[0.64]">
+              Desde carreras urbanas hasta activaciones fitness y retos corporativos, LVLX crea experiencias deportivas listas para impulsar marcas, comunidades y equipos.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {workflowSteps.map((item) => (
               <div key={item.step} className="glass rounded-[1.75rem] p-6 sm:p-8">
                 <div className="mb-10 flex items-center justify-between">
-                  <span className="text-5xl font-black tracking-[-0.07em] text-cyanx/70">{item.step}</span>
-                  <span className="h-px flex-1 bg-cyanx/20 ml-5" />
+                  <span className="text-5xl font-black text-cyanx/70">{item.step}</span>
+                  <span className="ml-5 h-px flex-1 bg-cyanx/20" />
                 </div>
-                <h3 className="text-2xl font-black uppercase tracking-[-0.04em] text-white">{item.title}</h3>
+                <h3 className="text-2xl font-black uppercase text-white">{item.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-white/[0.62]">{item.text}</p>
               </div>
             ))}
@@ -287,20 +300,20 @@ export default function Page() {
                 <Logo compact className="h-16 w-16" />
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.32em] text-cyanx">LVLX</p>
-                  <p className="text-sm text-white/[0.58]">Premium sports experience</p>
+                  <p className="text-sm text-white/[0.58]">Experiencias deportivas premium</p>
                 </div>
               </div>
-              <h2 className="text-4xl font-black uppercase leading-none tracking-[-0.06em] text-white sm:text-5xl lg:text-6xl">
-                Construyamos una experiencia que no parezca plantilla.
+              <h2 className="text-4xl font-black uppercase leading-none text-white sm:text-5xl lg:text-6xl">
+                ¿Listo para crear una experiencia que se recuerde?
               </h2>
             </div>
             <div className="glass rounded-[1.75rem] p-6 sm:p-8">
               <p className="text-base leading-8 text-white/[0.72]">
-                Esta landing esta lista para usar como base en GitHub y desplegar en Vercel. Los textos, imagenes, botones y secciones pueden cambiarse sin tocar ninguna base de datos.
+                Construyamos una activación deportiva con la energía, estética y precisión que tu marca necesita para conectar con su comunidad.
               </p>
               <div className="mt-7 grid gap-3">
                 <a href="mailto:hola@lvlx.com" className="rounded-full bg-cyanx px-6 py-4 text-center text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white">
-                  Solicitar propuesta
+                  Hablemos de tu experiencia
                 </a>
                 <a href="#inicio" className="rounded-full border border-white/[0.12] px-6 py-4 text-center text-sm font-black uppercase tracking-wide text-white/[0.78] transition hover:border-cyanx hover:text-cyanx">
                   Volver arriba
@@ -312,9 +325,19 @@ export default function Page() {
       </section>
 
       <footer className="border-t border-white/10 bg-black/40 px-4 py-10 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <Logo className="h-9 w-28" />
-          <p className="text-sm text-white/[0.45]">Landing estatica premium. Sin calendario, sin login, sin base de datos.</p>
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+            <Logo className="h-9 w-28" />
+            <p className="max-w-xl text-sm leading-6 text-white/[0.45]">
+              LVLX crea experiencias deportivas premium para marcas, atletas y comunidades en movimiento.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold text-white/[0.58]">
+            <a href="#experiencia" className="transition hover:text-cyanx">Experiencia</a>
+            <a href="#servicios" className="transition hover:text-cyanx">Servicios</a>
+            <a href="#comunidad" className="transition hover:text-cyanx">Comunidad</a>
+            <a href="#contacto" className="transition hover:text-cyanx">Contacto</a>
+          </div>
         </div>
       </footer>
     </main>

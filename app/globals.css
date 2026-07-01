@@ -78,7 +78,7 @@ a {
 }
 
 .hero-title {
-  letter-spacing: -0.07em;
+  letter-spacing: 0;
   line-height: 0.92;
   text-wrap: balance;
 }

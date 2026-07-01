@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "LVLX | Experiencias deportivas premium",
   description:
-    "Landing page premium para experiencias deportivas, retos de alto impacto y activaciones de marca.",
+    "Experiencias deportivas, retos y activaciones de alto impacto para marcas, atletas y comunidades.",
   icons: {
     icon: "/favicon.svg"
   }
