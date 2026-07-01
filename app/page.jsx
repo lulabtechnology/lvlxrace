@@ -43,7 +43,7 @@ const services = [
   "Contenido editable sin base de datos"
 ];
 
-const process = [
+const workflowSteps = [
   {
     step: "01",
     title: "Direccion visual",
@@ -265,7 +265,7 @@ export default function Page() {
           </div>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {process.map((item) => (
+            {workflowSteps.map((item) => (
               <div key={item.step} className="glass rounded-[1.75rem] p-6 sm:p-8">
                 <div className="mb-10 flex items-center justify-between">
                   <span className="text-5xl font-black tracking-[-0.07em] text-cyanx/70">{item.step}</span>
