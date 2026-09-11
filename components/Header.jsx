@@ -8,6 +8,7 @@ const navItems = [
   { href: "#experiencia", label: "Experiencia" },
   { href: "#servicios", label: "Servicios" },
   { href: "#comunidad", label: "Comunidad" },
+  { href: "#galeria", label: "Galería" },
   { href: "#contacto", label: "Contacto" }
 ];
 
@@ -35,7 +36,7 @@ export default function Header() {
 
         <a
           href="#contacto"
-          className="hidden rounded-full border border-cyanx/45 bg-cyanx/10 px-5 py-2 text-sm font-bold text-ice shadow-glow transition hover:-translate-y-0.5 hover:bg-cyanx hover:text-ink lg:inline-flex"
+          className="hidden rounded-full border border-cyanx/[0.45] bg-cyanx/10 px-5 py-2 text-sm font-bold text-ice shadow-glow transition hover:-translate-y-0.5 hover:bg-cyanx hover:text-ink lg:inline-flex"
         >
           Crear experiencia
         </a>
