@@ -1,0 +1,5 @@
+Después de aplicar este incremental puedes eliminar este asset antiguo porque ya no se usa:
+
+public/assets/logo-generated.webp
+
+Los antiguos hero/card de IA NO se eliminan manualmente porque este incremental los reemplaza en las mismas rutas por fotografías reales optimizadas.
